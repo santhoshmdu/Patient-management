@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+
+     {% block title %}NewPatient{% endblock title %}
+    {% block style %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 40%;
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    {% endblock style %}
+
+    {% block content %}
+    <div class="details" style="text-align: center; padding: 40px 10px 20px;">
+
+        <h2>Add Patient Details</h2>
+        <form action="/add_user" method="POST">
+            <label for="patientid">Patient Id:</label>
+            <input type="text" id="patientid" name="patientid" required>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="con">Contact:</label>
+            <input type="text" id="con" name="con" required>
+
+            <label for="pessure">Prssure:</label>
+            <input type="text" id="pressure" name="pressure" required>
+
+            <label for="oxygen">Oxygen:</label>
+            <input type="text" id="oxygen" name="oxygen" required>
+
+            <label for="pulse">Pulse:</label>
+            <input type="text" id="pulse" name="pulse" required>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" required>
+
+            <label for="dob">DOB:</label>
+            <input type="text" id="dob" name="dob" placeholder="dd mm yyyy" required>
+
+            <label for="caretaker">Caretaker:</label>
+            <input type="text" id="caretaker" name="caretaker" required>
+
+            <label for="place">Place:</label>
+            <input type="text" id="place" name="place" required>
+
+            <input type="submit" value="Add Patient">
+        </form>
+
+        <h2>Delete Patient Details</h2>
+        <form action="/delete_user" method="POST">
+            <label for="patientid">Patiend Id:</label>
+            <input type="text" id="patientid" name="patientid" required>
+
+            <input type="submit" value="Delete Patient">
+        </form>
+    </div>
+    {% endblock content %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}Patientmanagement{% endblock title %}
+
+{% block content%}
+<div class="parentcont">
+<div class="leftimg" style="float:left;">
+    <h1>
+    Linear Model Fit
+     </h1>
+     <h5 style="background-color: rgb(58, 58, 224); padding:10px  40px ; border-radius: 10px;"><label >Error % : Minimum-7.22
+        mg/dl  Maximum-5.35 mg/dl</label></h5>
+
+    <canvas id="plot-canvas" width="800" height="800" ></canvas>
+    <script>
+        
+        const encodedImage = "{{ image }}";
+
+        const img = new Image();
+        img.src = 'data:image/png;base64,' + encodedImage;
+
+        
+        const canvas = document.getElementById('plot-canvas');
+
+       
+        const context = canvas.getContext('2d');
+        img.onload = () => {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        };
+    </script>
+
+    <h2> BGL Management</h2>
+        <h5 style="background-color: rgb(58, 58, 224); padding:10px  40px ; border-radius: 10px;"><label >Clinical Trail:
+            TIR:63%  Time spent in hypo:8.6%  Time Spent in hyper :27.6  MPC Control : TIR: 87.1% <br>Time
+            spent in hypo:5.4% Time spent in hyper:7.5%</label></h5>
+        <img width="100%" height="700px" src="{{ url_for('static',filename='./assets/img/Control.png') }}">
+
+</div>
+</div>
+
+
+
+{% endblock content %}

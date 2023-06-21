@@ -1,0 +1,14 @@
+
+
+	[
+	{ 
+	"PatientName": "P1",
+	"Age": "42",
+	"ManageFile": "kare.jpg"
+	},
+	{
+	"PatientName": "P1",
+	"Age": "42",
+	"ManageFile": "kare.jpg"
+	}
+]

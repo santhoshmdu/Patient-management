@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+           h1 {
+      color: blue;
+      font-size: 24px;
+      text-align: center;
+    }
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>  </title>
+</head>
+<body style="background-color:aquamarine;">
+
+<h1> Smart Artificial Pancreas for {{ patientname }} </h1>
+
+    <div style="float:left">
+    <table >
+        <thead><h2>patient details</h2></thead>
+          <img width="100px" height="100px" src="{{ url_for('static', filename= './assets/img/profile.jpg') }} " alt="profile">
+
+            <tr>S.No:{{ item[0]['S.No'] }}</tr><br>
+            <tr>Age:{{ item[0]['age']}}</tr><br>
+            <tr>Sex:{{ item[0]['Sex'] }}</tr><br>
+          <tr>BMI:{{ item[0]['BMI'] }}</tr><br>
+            <tr>Co-Morbidity Conditions:{{ item[0]['Co-Morbidity Conditions'] }}</tr>
+
+    </table>
+</div>
+  <img src="{{ url_for('static', filename= image) }}" alt="Measure Image">
+
+
+
+</body>
+</html>

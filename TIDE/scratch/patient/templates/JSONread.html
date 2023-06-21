@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Data</title>
+    <style> table{
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    th,td{
+    text-align: left;
+    padding: 8px;
+    }
+   th{
+   background-color:#f2f2f2;
+   }
+.action-button{
+margin-right: 30px;
+margin-bottom: 30px;
+}
+</style>
+
+
+</head>
+<body style="background-color:aquamarine;">
+<table>
+    <thead>
+        <tr>
+            <th>S.No</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>BMI</th>
+            <th>Co-Morbidity Conditions</th>
+            <th>Target BGL Range (mg/dL)</th>
+            <th>Avg.CHO/day(g)</th>
+            <th>Life Style</th>
+            <th>Oral Drugs</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for item in data %}
+            <tr>
+                <td>{{ item['S.No'] }}</td>
+                <td>{{ item['age'] }}</td>
+                <td>{{ item['Sex'] }}</td>
+                <td>{{ item['BMI'] }}</td>
+                <td>{{ item['Co-Morbidity Conditions'] }}</td>
+                <td>{{ item['Target BGL Range (mg/dL)'] }}</td>
+                <td>{{ item['Avg.CHO/day(g)'] }}</td>
+                <td>{{ item['Life Style'] }}</td>
+                <td>{{ item['Oral Drugs'] }}</td>
+            </tr>
+            {% endfor %}
+    </tbody>
+</table>
+
+<form action="/ManageModelPatient" method="POST" id="patientForm">
+    <label for="Patientname">Patient Name:</label>
+    <input type="text" id="Patientname" name="Patientname" required>
+    
+    <p>Select mode:</p>
+    <input type="radio" id="history" name="mode" value="0" checked>
+    <label for="history">History</label>
+    
+    <input type="radio" id="realtime" name="mode" value="1">
+    <label for="realtime">Real-time</label>
+  
+    <input type="submit" value="Manage">
+  </form>
+  
+
+</body>
+</html>

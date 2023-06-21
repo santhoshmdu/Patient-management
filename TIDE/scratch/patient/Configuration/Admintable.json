@@ -1,0 +1,15 @@
+
+{
+	"Patient_details":[
+	{ 
+	"PatientName": "P1",
+	"Age": "42",
+	"ManageFile": "Hi"
+	},
+	{
+	"PatientName": "P1",
+	"Age": "42",
+	"ManageFile": "Hey"
+	}
+]
+}

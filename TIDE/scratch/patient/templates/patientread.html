@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <th>Patient ID</th>
+            <th>Age</th>
+        </tr>
+        {% for data in data %}
+        <tr>
+            <td><a style=" text-decoration:none;" href="/patient/{{ data['PatientName'] }}">
+                    {{ data["PatientName"] }}</a> </td>
+            <td>{{ data["ManageFile"]}}</td>
+            <td> {{data["Age"]}}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+<form action = "post">
+    <button type= "submit" formaction= "/kare.jpeg"> Manage</button>
+    <button type= "submit" formaction= "/kare.jpeg">  Model </button>
+</form>
+
+</body>
+
+</html>

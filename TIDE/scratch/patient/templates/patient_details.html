@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}PatientDetail{% endblock title %}
+{% block style %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 3px;
+            font-size: 14px;
+            margin-top: 20px;
+
+        }
+    </style>
+    {% endblock style %}
+
+
+ {% block content %}
+    <h1>Patient Details</h1>
+
+    <table>
+        <tr>
+            <th>Field</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Patient ID:</td>
+            <td>{{ patient['patientid'] }}</td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>{{ patient['name'][0] }}</td>
+        </tr>
+        <tr>
+            <td>Contact:</td>
+            <td>{{ patient['con'][0] }}</td>
+        </tr>
+        <tr>
+            <td>Pressure:</td>
+            <td>{{ patient['pressure'][0] }}</td>
+        </tr>
+        <tr>
+            <td>Oxygen:</td>
+            <td>{{ patient['oxygen'][0] }}</td>
+        </tr>
+        <tr>
+            <td>Pulse:</td>
+            <td>{{ patient['pulse'][0] }}</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td>{{ patient['age'][0] }}</td>
+        </tr>
+        <tr>
+            <td>DOB:</td>
+            <td>{{ patient['dob'][0] }}</td>
+        </tr>
+        <tr>
+            <td>Caretaker:</td>
+            <td>{{ patient['caretaker'][0] }}</td>
+        </tr>
+        <tr>
+            <td>Place:</td>
+            <td>{{ patient['place']}}</td>
+        </tr>
+    </table>
+
+    <a href="{{patient['patientid']}}/manage" class="button">MANAGE</a>
+{% endblock content %}

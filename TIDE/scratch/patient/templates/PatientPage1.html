@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Page</title>
+</head>
+<body style="background-color:aquamarine;">
+<h1> Smart Artificial Pancreas for {{ patientname }} </h1>
+
+
+<form action="/ManageModelPatient" method="POST" id="patientForm">
+ <label for="Patientname">Patientname</label>
+<input type="text" id="Patientname" name="Patientname" required>
+    <input type="submit" value="Manage">
+</form>
+
+
+</body>
+</html>

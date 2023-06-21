@@ -1,0 +1,19 @@
+
+
+	
+	{
+	"PatientP1":	
+	{ 
+	"PatientName": "P1",
+	"Age": "42",
+	"ManageFile": "kare.jpg"
+	},
+	"PatientP2":
+	{
+	"PatientName": "P1",
+	"Age": "42",
+	"ManageFile": "kare.jpg"
+	}
+	}
+	
+

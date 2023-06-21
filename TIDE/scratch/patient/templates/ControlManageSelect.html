@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Control Manage Select</title>
+</head>
+<body style="background-color:aquamarine;">
+
+<h1>Select to Control, Model, or Visualize Clinical Trial of Patient {{ patientname }}</h1>
+<form action="/ManageModelPatientOperation/{{ patientname }}" method = 'POST'>
+
+  <input type="submit" name = "operation" value="Control">
+  <input type="submit" name = "operation" value="Model">
+    <input type="submit" name = "operation" value="ClinicalTrials">
+</form>
+
+
+</body>
+</html>
